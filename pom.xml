@@ -8,7 +8,6 @@
 		<apachePOI.version>3.16-beta1</apachePOI.version>
 	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>

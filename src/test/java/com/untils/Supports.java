@@ -19,22 +19,46 @@ import com.configs.Configs;
 import com.datas.PathProvider;
 
 public class Supports {
-	public WebDriver driver = null;
+	private static WebDriver driver;		//o day anh de private vi li do, tranh' cac class khac thay doi driver, khi can thi dung ham getApp() nay ne
 	int timeoutDefault = 30;
 	public String browser ="";
 	PathProvider path = new PathProvider();
 	public String webDriverPath;
+	
+	public Supports() {
+		browser = Configs.browser;
+	}
+	
+	//Em phai phan tich FW cua anh, hoc va viet thanh FW cua em. Vi cai mindset cua anh no khac em --> neu loi thi e se k bik sua
+	/*
+	 * Vi du o day: 
+	 * 1. Anh initialize 1 String browser: 
+	 * 		Muc dich: de anh read tu 1 file nao do (java, properties, excel v...v..). Kieu khi web.conf ay
+	 * 		Loi o day: Em chua read no tu Configs.browser
+	 * 
+	 * ---> co 3 cach giai quyet:
+	 * 1. Dung constructor, ngay luc em tao object den Supports class --> no cung read lun String browser
+	 * 2. Em call 1 method khoi tao no kieu nhu readConfigs --> roi gan vao cho nao cung dc, truoc khi khoi tao WebDriver
+	 * 3. Dung no nhu setUp()
+	 * 
+	 * Em nen can trong:
+	 * private dung trong noi bo, co nhieu method xu ly ngam, dung nen public
+	 */
+	
 	public WebDriver getApp()
 	{
 		return driver;
 	}
-	public void readConfigs()
-	{
+	
+	public void readConfigs() {
 		browser = Configs.browser;
 	}
+	
 	public void setUp()
 	{
+		//readConfigs();
 		ChromeOptions options = new ChromeOptions();
+		System.out.println("!!!!!!!!!!!!!!   "+browser);
 		switch (browser.toLowerCase()) {
 		case "chrome" :
 			webDriverPath = path.getDriverChromePath();

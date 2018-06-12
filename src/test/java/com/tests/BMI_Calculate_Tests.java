@@ -9,10 +9,11 @@ import com.datas.ReadFileExcel;
 import com.modules.BMI_Calculate_Functions;
 
 public class BMI_Calculate_Tests{
-	BMI_Calculate_Functions calculatePage = new BMI_Calculate_Functions();
+	BMI_Calculate_Functions calculatePage;
 	@BeforeTest
 	public void setUp()
 	{
+		calculatePage = new BMI_Calculate_Functions();
 		calculatePage.launchPage();
 //		System.setProperty("webdriver.chrome.driver","D:\\chrome\\chromedriver.exe");
 	}
