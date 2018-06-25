@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.BMI_Calculate_Tests">
+      <class name="com.tests.VNW_Tests">
         <methods>
+          <include name="setUpAndroid"/>
           <include name="TC001"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tests.BMI_Calculate_Tests -->
+      </class> <!-- com.tests.VNW_Tests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
