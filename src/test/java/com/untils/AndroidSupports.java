@@ -34,24 +34,24 @@ public class AndroidSupports {
 	public void setUp() throws MalformedURLException
 	{
 		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "192.168.124.101:5555");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "192.168.35.101:5555");
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
-		caps.setCapability("appPackage", "com.vietnamworks.vietnamworks");
-		caps.setCapability("appActivity", "com.vietnamworks.vietnamworks.activities.general.SplashActivity");
+		caps.setCapability("appPackage", "vn.tiki.app.tikiandroid");
+		//caps.setCapability("appActivity", "vn.tiki.app.tikiandroid.ui.home.UniversalLinkDispatcherActivity");
+		caps.setCapability("appActivity", "vn.tiki.app.tikiandroid.ui.SplashActivity");
 		driverAn = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),caps);
 		driverAn.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
 	public MobileElement getElement(How eHow, String eLocator)
 	{
-		//waitForElement(eHow, eLocator, timeoutDefault);
+		waitForElement(eHow, eLocator, timeoutDefault);
 		switch (eHow) {
 		case CLASS_NAME:
 			return driverAn.findElementByClassName(eLocator);
-		case ID:
+		case ID:	
+			System.out.println(driverAn.findElementById(eLocator));
 			return driverAn.findElementById(eLocator);
-		case ID_OR_NAME:
-			return driverAn.findElement(By.id(eLocator));
 		case NAME:
 			return driverAn.findElementByName(eLocator);
 		case XPATH:
@@ -59,6 +59,7 @@ public class AndroidSupports {
 		case UNSET:
 			break;
 		}
+		
 		return null;
 	}
 	public void waitForElement(How eHow, String eLocator, int timeout)
@@ -90,20 +91,22 @@ public class AndroidSupports {
 	}
 	public void click(How eHow, String eLocator)
 	{
-		//waitForElement(eHow, eLocator, timeoutDefault);
+		waitForElement(eHow, eLocator, timeoutDefault);
+		getElement(eHow, eLocator).isDisplayed();
 		getElement(eHow, eLocator).click();
 	}
 	public void fill(How eHow, String eLocator, String text)
 	{
-		//waitForElement(eHow, eLocator, timeoutDefault);
+		waitForElement(eHow, eLocator, timeoutDefault);
+		getElement(eHow, eLocator).isDisplayed();
 		getElement(eHow, eLocator).clear();
 		getElement(eHow, eLocator).sendKeys(text);
 	}
-	public void scrollByText(How eHow, String eLocator, String city)
+	public void scrollByText(How eHow, String eLocator, String key)
 	{
 		waitForElement(eHow, eLocator, timeoutDefault);
-		//\"" + text + "\"
-		driverAn.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+city+"\"));");	
+		getElement(eHow, eLocator).isDisplayed();
+		driverAn.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+key+"\"));");	
 	}
 	public void dragAndDropFromAToB(String eLocator, int a, int b)
 	{

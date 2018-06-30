@@ -7,11 +7,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.How;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.modules.VNW_Functions;
+import com.objects.VNW_Page;
 import com.untils.AndroidSupports;
 
 import io.appium.java_client.MobileElement;
@@ -19,42 +21,25 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileBrowserType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class VNW_Tests {
+public class VNW_Tests extends VNW_Page {
 	//private String city = "Ho Chi Minh";
-	AndroidSupports as = new AndroidSupports();
+	AndroidSupports supports = new AndroidSupports();
 	VNW_Functions fun = new VNW_Functions();
 	@BeforeTest
 	public void setUpAndroid() throws MalformedURLException
 	{
-		as.setUp();
+		supports.setUp();
 	}
 	@Test
-//	public void SearchJob() throws InterruptedException
-//	{
-//		driverAn.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-//		driverAn.getClass();
-//		driverAn.findElement(By.id("com.vietnamworks.vietnamworks:id/mainedit")).sendKeys("Tester");
-//		driverAn.findElement(By.id("com.vietnamworks.vietnamworks:id/location")).click();
-//		//driverAn.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Ho Chi Minh\"));");
-//		//driverAn.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+city+"\"));");	
-//		driverAn.findElement(By.id("com.vietnamworks.vietnamworks:id/main_edit")).sendKeys("Ho chi minh");
-//		//click to select location
-//		//driverAn.findElement(By.xpath("//android.widget.ListView[@index='3']//android.widget.LinearLayout[@index='0']")).click();
-//		driverAn.findElementById("com.vietnamworks.vietnamworks:id/main").click();
-//		//click on find job button
-//		driverAn.findElement(By.id("com.vietnamworks.vietnamworks:id/find_btn")).click();	
-//		Thread.sleep(3000);
-//		as.takeScreenShot(driverAn);
-//	}
 	public void TC001()
 	{
-		fun.allow();
-		fun.job("Tester");
-		fun.selectLocation();
-		fun.typeLocation("Ho Chi Minh");
-		fun.clickLocation();
-		fun.findJob();
-		fun.takeScreenShots();
+		supports.click(How.ID, VNW_BTN_ALLOW_LOCATION);
+		supports.fill(How.ID, VNW_TXT_JOB_NAME, "Tester");
+		supports.click(How.ID, VNW_SELECT_LOCATION);
+		supports.fill(How.ID, VNW_TXT_LOCATION_NAME, "Ho chi minh");
+		supports.click(How.ID, VNW_LOCATION_NAME);
+		supports.click(How.ID, VNW_BTN_FIND_JOB);
+		
 	}
 //	@AfterTest
 //	public void TearDown()

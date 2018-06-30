@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.VNW_Tests">
+      <class name="com.tests.TIKI_Tests">
         <methods>
-          <include name="setUpAndroid"/>
           <include name="TC001"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.tests.VNW_Tests -->
+      </class> <!-- com.tests.TIKI_Tests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
