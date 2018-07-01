@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -142,5 +143,15 @@ public class AndroidSupports {
 		{
 			e.printStackTrace();
 		}
+	}
+	public void swipe()
+	{
+//		Dimension size = driverAn.manage().window().getSize();
+//		System.out.println(size);
+//		int startx = (int) (size.width * 0.70);
+//		int endx = (int) (size.width * 0.30);
+//		int starty = (int) (size.height/2);
+//		//
+//		driverAn.swipe(startx, starty, endx, starty, 3000);
 	}
 }

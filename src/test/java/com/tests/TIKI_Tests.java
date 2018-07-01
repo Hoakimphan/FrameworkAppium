@@ -2,6 +2,7 @@ package com.tests;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.support.How;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -20,15 +21,17 @@ public class TIKI_Tests extends TIKI_Page{
 	public void TC001()
 	{
 		supports.click(How.ID, TIKI_SEARCH_HOME_PAGE);
-		supports.fill(How.ID, TIKI_TXT_SEARCH, "Son");
+		supports.fill(How.ID, TIKI_TXT_SEARCH, "Son moi bbia");
 		supports.click(How.ID, TIKI_SELECT_RESULT);
-		supports.scrollByText(How.NAME, TIKI_PRODUCT, "Son Môi Bbia Last Rouge (3.7g)");//chua run duoc dong nay
-		supports.click(How.NAME, TIKI_PRODUCT);
-		supports.click(How.ID, TIKI_BTN_VIEW_CART);
+		//supports.scrollByText(How.NAME, TIKI_PRODUCT, "Son Môi Bbia Last Rouge (3.7g)");//chua run duoc dong nay
+		supports.click(How.XPATH, TIKI_PRODUCT);
 		supports.click(How.ID, TIKI_BTN_ADD_PRODUCT);
+		supports.click(How.ID, TIKI_BTN_VIEW_CART);
+		supports.click(How.ID, TIKI_BTN_GOT_IT);
 		supports.click(How.ID, TIKI_BTN_INCREASE_NUMBER);
 		supports.click(How.ID, TIKI_BTN_CONTINUE_CHECKOUT);
-		supports.click(How.XPATH, TIKI_SELECT_REGISTER_TAB);
+		supports.click(How.NAME, TIKI_SELECT_REGISTER_TAB);
+		//supports.swipe();
 		supports.fill(How.ID, TIKI_TXT_FULL_NAME, "Quyết tâm đậu đồ án");
 		supports.fill(How.ID, TIKI_TXT_EMAIL, "kimhoa@gmail.com");
 		supports.fill(How.ID, TIKI_TXT_PASSWORD, "Hoahoa12345");

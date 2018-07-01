@@ -5,14 +5,15 @@ public class TIKI_Page {
 	public String TIKI_TXT_SEARCH="vn.tiki.app.tikiandroid:id/etQuery";
 	public String TIKI_SELECT_RESULT ="vn.tiki.app.tikiandroid:id/itemView";
 	//when click on expansion btn
-	public String TIKI_PRODUCT ="//android.widget.RelativeLayout[@text='Son Môi Bbia Last Rouge (3.7g)']";
+	public String TIKI_PRODUCT ="//android.view.ViewGroup[@index='0']//android.widget.RelativeLayout[@index='0']";
 	public String TIKI_BTN_ADD_PRODUCT ="vn.tiki.app.tikiandroid:id/btAddToCart";
 	public String TIKI_BTN_VIEW_CART ="vn.tiki.app.tikiandroid:id/btViewCart";
-	//public String TIKI_ICON_PRODUCT_CATEGORY ="Thêm vào giỏ hàng";
+	public String TIKI_BTN_GOT_IT = "vn.tiki.app.tikiandroid:id/btGotIt";
 	public String TIKI_BTN_INCREASE_NUMBER ="vn.tiki.app.tikiandroid:id/ivIncrease";
 	//VIET HAM SWIPE BEN CLASS SUPPORTS
 	public String TIKI_BTN_CONTINUE_CHECKOUT ="vn.tiki.app.tikiandroid:id/btContinueCheckout";//get by name
-	public String TIKI_SELECT_REGISTER_TAB ="//android.widget.LinearLayout[@index='0']//android.support.v7.app.ActionBar$Tab[@index='1']";//get by name
+//	public String TIKI_SELECT_REGISTER_TAB ="//android.widget.HorizontalScrollView[@index='1']//android.widget.LinearLayout[@index='0']//android.support.v7.app.ActionBar$Tab[@index='1']";//get by name
+	public String TIKI_SELECT_REGISTER_TAB ="Đăng ký";//get by name
 	public String TIKI_TXT_FULL_NAME ="vn.tiki.app.tikiandroid:id/etName";
 	public String TIKI_TXT_EMAIL ="vn.tiki.app.tikiandroid:id/etEmail";//get by name
 	public String TIKI_TXT_PASSWORD ="vn.tiki.app.tikiandroid:id/etPassword";//get by name
