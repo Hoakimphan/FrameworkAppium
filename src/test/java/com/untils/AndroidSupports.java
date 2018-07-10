@@ -14,6 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.How;
@@ -24,10 +25,12 @@ import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class AndroidSupports {
-	AndroidDriver<MobileElement> driverAn;
+	AndroidDriver<AndroidElement> driverAn;
+	Dimension size;
 	
 	int timeoutDefault = 30;
 	String destDir;
@@ -41,12 +44,24 @@ public class AndroidSupports {
 		caps.setCapability("appPackage", "vn.tiki.app.tikiandroid");
 		//caps.setCapability("appActivity", "vn.tiki.app.tikiandroid.ui.home.UniversalLinkDispatcherActivity");
 		caps.setCapability("appActivity", "vn.tiki.app.tikiandroid.ui.SplashActivity");
-		driverAn = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),caps);
+		driverAn = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),caps);
 		driverAn.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
-	public MobileElement getElement(How eHow, String eLocator)
+	public MobileElement getElement(How eHow, String eLocator) throws InterruptedException
 	{
-		waitForElement(eHow, eLocator, timeoutDefault);
+		//Thread.sleep(15000);
+//		try {
+//			waitForElement(eHow, eLocator, timeoutDefault);
+//		}
+//		catch(TimeoutException ex)
+//		{
+//			System.out.println(ex.getMessage());
+//		}
+//		catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//		
+		
 		switch (eHow) {
 		case CLASS_NAME:
 			return driverAn.findElementByClassName(eLocator);
@@ -90,23 +105,25 @@ public class AndroidSupports {
 	{
 		driverAn.quit();
 	}
-	public void click(How eHow, String eLocator)
+	public void click(How eHow, String eLocator) throws InterruptedException 
 	{
-		waitForElement(eHow, eLocator, timeoutDefault);
+		//Thread.sleep(6000);
+		//waitForElement(eHow, eLocator, timeoutDefault);
 		getElement(eHow, eLocator).isDisplayed();
 		getElement(eHow, eLocator).click();
 	}
-	public void fill(How eHow, String eLocator, String text)
+	public void fill(How eHow, String eLocator, String text) throws InterruptedException 
 	{
-		waitForElement(eHow, eLocator, timeoutDefault);
+		
+		//waitForElement(eHow, eLocator, timeoutDefault);
 		getElement(eHow, eLocator).isDisplayed();
 		getElement(eHow, eLocator).clear();
 		getElement(eHow, eLocator).sendKeys(text);
 	}
-	public void scrollByText(How eHow, String eLocator, String key)
+	public void scrollByText(String key) throws InterruptedException
 	{
-		waitForElement(eHow, eLocator, timeoutDefault);
-		getElement(eHow, eLocator).isDisplayed();
+		//waitForElement(eHow, eLocator, timeoutDefault);
+		//getElement(eHow, eLocator).isDisplayed();
 		driverAn.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+key+"\"));");	
 	}
 	public void dragAndDropFromAToB(String eLocator, int a, int b)
@@ -144,14 +161,15 @@ public class AndroidSupports {
 			e.printStackTrace();
 		}
 	}
-	public void swipe()
-	{
-//		Dimension size = driverAn.manage().window().getSize();
+//	public void SwipeTab() 
+//	{
+//		size = driverAn.manage().window().getSize();
 //		System.out.println(size);
-//		int startx = (int) (size.width * 0.70);
-//		int endx = (int) (size.width * 0.30);
-//		int starty = (int) (size.height/2);
+//		int startx = (int) (size.width * 0.80);
+//		int endx = (int) (size.width * 0.05);
+//		int starty =  size.height/2;
 //		//
 //		driverAn.swipe(startx, starty, endx, starty, 3000);
-	}
+//		
+//	}
 }

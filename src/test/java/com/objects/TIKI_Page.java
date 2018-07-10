@@ -12,8 +12,7 @@ public class TIKI_Page {
 	public String TIKI_BTN_INCREASE_NUMBER ="vn.tiki.app.tikiandroid:id/ivIncrease";
 	//VIET HAM SWIPE BEN CLASS SUPPORTS
 	public String TIKI_BTN_CONTINUE_CHECKOUT ="vn.tiki.app.tikiandroid:id/btContinueCheckout";//get by name
-//	public String TIKI_SELECT_REGISTER_TAB ="//android.widget.HorizontalScrollView[@index='1']//android.widget.LinearLayout[@index='0']//android.support.v7.app.ActionBar$Tab[@index='1']";//get by name
-	public String TIKI_SELECT_REGISTER_TAB ="Đăng ký";//get by name
+	public String TIKI_SELECT_REGISTER_TAB ="//android.support.v7.app.ActionBar$Tab[@index='1']";//get by name
 	public String TIKI_TXT_FULL_NAME ="vn.tiki.app.tikiandroid:id/etName";
 	public String TIKI_TXT_EMAIL ="vn.tiki.app.tikiandroid:id/etEmail";//get by name
 	public String TIKI_TXT_PASSWORD ="vn.tiki.app.tikiandroid:id/etPassword";//get by name
@@ -35,5 +34,15 @@ public class TIKI_Page {
 	public String TIKI_BTN_CONTINUE ="vn.tiki.app.tikiandroid:id/btContinue";
 	public String TIKI_SELECT_PAY_METHOD ="//android.widget.RelativeLayout[@index='9']//vn.tiki.app.tikiandroid:id/rbSelectMethod[@index=['0']";
 	public String TIKI_BTN_CHECK_OUT ="vn.tiki.app.tikiandroid:id/btCompleteCheckout";
+	//login tab
+	public String TIKI_TXT_EMAIL_LOGIN = "vn.tiki.app.tikiandroid:id/etEmail";
+	public String TIKI_TXT_PASSWORD_LOGIN = "vn.tiki.app.tikiandroid:id/etPassword";
+	public String TIKI_BTN_LOGIN = "vn.tiki.app.tikiandroid:id/btSignIn";
+	//add more address
+	public String TIKI_BTN_ADD_MORE_ADDRESS="vn.tiki.app.tikiandroid:id/tvAddAddress";
+	public String TIKI_CHECKBOX_COMPANY_ADDRESS = "vn.tiki.app.tikiandroid:id/cbCompany";
+	public String TIKI_BTN_SAVE_ADDRESS = "vn.tiki.app.tikiandroid:id/address_button";
+	public String TIKI_SELECT_ADDRESS = "vn.tiki.app.tikiandroid:id/rbAddress";
+	
 	
 }
