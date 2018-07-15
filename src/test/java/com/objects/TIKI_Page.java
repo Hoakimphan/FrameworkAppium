@@ -21,18 +21,22 @@ public class TIKI_Page {
 	public String TIKI_BTN_SELECT_GENDER ="vn.tiki.app.tikiandroid:id/rbFemale";//get by ID
 	public String TIKI_BTN_REGISTER ="vn.tiki.app.tikiandroid:id/btRegister";//get by ID
 	//infor to oder
-	public String TIKI_TXT_FULL_NAME_FOR_ORDER ="vn.tiki.app.tikiandroid:id/name";
+	public String TIKI_TXT_FULL_NAME_FOR_ORDER ="//TextInputLayout[@index='0']//android.widget.FrameLayout[@index='0']//android.widget.EditText[@index='0']";
 	public String TIKI_TXT_PHONE_NUMBER ="vn.tiki.app.tikiandroid:id/phone";
 	public String TIKI_EDIT_CITY ="vn.tiki.app.tikiandroid:id/etCity";
-	public String TIKI_SELECT_CITY ="Hồ Chí Minh";
-	public String TIKI_SELECT_DISTRICT ="Quận Thủ Đức";
-	public String TIKI_SELECT_WARD ="Phường Bình Thọ";
+	public String TIKI_TXT_CITY = "vn.tiki.app.tikiandroid:id/etSearch";
+	
+	public String TIKI_SELECT_CITY ="//android.support.v7.widget.RecyclerView[@index='2']//android.widget.LinearLayout[@index='0']//android.widget.TextView[@index='0']";
+	//public String TIKI_CITY = "//android.widget.LinearLayout[@text='Hồ Chí Minh']";
+	public String TIKI_TXT_DISTRICT ="vn.tiki.app.tikiandroid:id/etSearch";
+	public String TIKI_SELECT_DISTRICT = "//android.support.v7.widget.RecyclerView[@index='2']//android.widget.LinearLayout[@index='0']//android.widget.TextView[@index='0']";
+	public String TIKI_SELECT_WARD ="//android.support.v7.widget.RecyclerView[@index='2']//android.widget.LinearLayout[@index='1']//android.widget.TextView[@index='0']";
 	public String TIKI_TXT_ADDRESS ="vn.tiki.app.tikiandroid:id/address";
 	public String TIKI_BTN_PAY ="vn.tiki.app.tikiandroid:id/pay";
 	//GET BY XPATH
 	//public String TIKI_BTN_CONTINUE ="//vn.tiki.app.tikiandroid:id/rlButtonContainer[@index='1']//vn.tiki.app.tikiandroid:id/btContinue[@index='0']";
 	public String TIKI_BTN_CONTINUE ="vn.tiki.app.tikiandroid:id/btContinue";
-	public String TIKI_SELECT_PAY_METHOD ="//android.widget.RelativeLayout[@index='9']//vn.tiki.app.tikiandroid:id/rbSelectMethod[@index=['0']";
+	public String TIKI_SELECT_PAY_METHOD ="//android.widget.RelativeLayout[@index='9']//android.widget.RadioButton[@index='0']";
 	public String TIKI_BTN_CHECK_OUT ="vn.tiki.app.tikiandroid:id/btCompleteCheckout";
 	//login tab
 	public String TIKI_TXT_EMAIL_LOGIN = "vn.tiki.app.tikiandroid:id/etEmail";
@@ -43,6 +47,11 @@ public class TIKI_Page {
 	public String TIKI_CHECKBOX_COMPANY_ADDRESS = "vn.tiki.app.tikiandroid:id/cbCompany";
 	public String TIKI_BTN_SAVE_ADDRESS = "vn.tiki.app.tikiandroid:id/address_button";
 	public String TIKI_SELECT_ADDRESS = "vn.tiki.app.tikiandroid:id/rbAddress";
+	//info add more address
+	public String TIKI_BTN_RADIO_SELECT_ADD_MORE_ADDRESS = "//android.widget.RelativeLayout[@index='2']//android.widget.RadioButton[@index='0']";
+	public String TIKI_BTN_VIEW_ORDER_LIST = "vn.tiki.app.tikiandroid:id/btViewOrder";
+	public String TIKI_BTN_VIEW_ORDER_DETAIL = "//android.widget.LinearLayout[@index='0']//android.widget.LinearLayout[@index='1']//android.widget.LinearLayout[@index='2']//android.widget.ImageView[@index='0']";
+	
 	
 	
 }

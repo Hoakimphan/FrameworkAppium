@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Tiki Suite Test]">
+  <test thread-count="5" name="BuyAProduct(failed)">
     <classes>
       <class name="com.tests.TIKI_Tests">
         <methods>
           <include name="login"/>
+          <include name="searchAndSelectProduct"/>
           <include name="setUp"/>
           <include name="addAddress"/>
           <include name="addProduct"/>
@@ -13,5 +14,5 @@
         </methods>
       </class> <!-- com.tests.TIKI_Tests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- BuyAProduct(failed) -->
+</suite> <!-- Failed suite [Tiki Suite Test] -->

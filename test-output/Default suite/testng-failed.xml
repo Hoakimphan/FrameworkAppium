@@ -5,8 +5,11 @@
     <classes>
       <class name="com.tests.TIKI_Tests">
         <methods>
-          <include name="TC001"/>
+          <include name="login"/>
           <include name="setUp"/>
+          <include name="addAddress"/>
+          <include name="addProduct"/>
+          <include name="TearDown"/>
         </methods>
       </class> <!-- com.tests.TIKI_Tests -->
     </classes>

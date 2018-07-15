@@ -26,6 +26,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class AndroidSupports {
@@ -47,21 +48,9 @@ public class AndroidSupports {
 		driverAn = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),caps);
 		driverAn.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
-	public MobileElement getElement(How eHow, String eLocator) throws InterruptedException
+	public MobileElement getElement(How eHow, String eLocator) 
 	{
-		//Thread.sleep(15000);
-//		try {
-//			waitForElement(eHow, eLocator, timeoutDefault);
-//		}
-//		catch(TimeoutException ex)
-//		{
-//			System.out.println(ex.getMessage());
-//		}
-//		catch (Exception e) {
-//			// TODO: handle exception
-//		}
-//		
-		
+		waitForElement(eHow, eLocator, timeoutDefault);
 		switch (eHow) {
 		case CLASS_NAME:
 			return driverAn.findElementByClassName(eLocator);
@@ -105,14 +94,14 @@ public class AndroidSupports {
 	{
 		driverAn.quit();
 	}
-	public void click(How eHow, String eLocator) throws InterruptedException 
+	public void click(How eHow, String eLocator) 
 	{
 		//Thread.sleep(6000);
-		//waitForElement(eHow, eLocator, timeoutDefault);
+		waitForElement(eHow, eLocator, timeoutDefault);
 		getElement(eHow, eLocator).isDisplayed();
 		getElement(eHow, eLocator).click();
 	}
-	public void fill(How eHow, String eLocator, String text) throws InterruptedException 
+	public void fill(How eHow, String eLocator, String text) 
 	{
 		
 		//waitForElement(eHow, eLocator, timeoutDefault);
@@ -120,7 +109,7 @@ public class AndroidSupports {
 		getElement(eHow, eLocator).clear();
 		getElement(eHow, eLocator).sendKeys(text);
 	}
-	public void scrollByText(String key) throws InterruptedException
+	public void scrollByText(String key)
 	{
 		//waitForElement(eHow, eLocator, timeoutDefault);
 		//getElement(eHow, eLocator).isDisplayed();
@@ -161,6 +150,10 @@ public class AndroidSupports {
 			e.printStackTrace();
 		}
 	}
+	public void pressKey()
+	{
+		driverAn.pressKeyCode(AndroidKeyCode.KEYCODE_NUMPAD_ENTER );
+	}
 //	public void SwipeTab() 
 //	{
 //		size = driverAn.manage().window().getSize();
@@ -172,4 +165,5 @@ public class AndroidSupports {
 //		driverAn.swipe(startx, starty, endx, starty, 3000);
 //		
 //	}
+	
 }
