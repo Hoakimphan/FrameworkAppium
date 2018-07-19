@@ -12,10 +12,11 @@ import com.objects.TIKI_Page;
 import com.untils.AndroidSupports;
 
 public class TIKI_Tests extends TIKI_Page{
-	AndroidSupports supports = new AndroidSupports();
+	AndroidSupports supports = null;
 	@BeforeTest
 	public void setUp() throws MalformedURLException
 	{
+		supports = new AndroidSupports();
 		supports.setUp();
 	}
 //	@Test
@@ -75,7 +76,7 @@ public class TIKI_Tests extends TIKI_Page{
 //		//supports.click(How.ID, TIKI_BTN_CONTINUE);
 //		//supports.click(How.ID, TIKI_BTN_PAY);
 //		supports.click(How.ID, TIKI_BTN_CONTINUE);
-//		supports.scrollByText("Thanh toán tiền mặt khi nhận hàng");
+//		//supports.scrollByText("Thanh toán tiền mặt khi nhận hàng");
 //		supports.click(How.XPATH, TIKI_SELECT_PAY_METHOD);
 //		supports.click(How.ID, TIKI_BTN_CONTINUE);
 //		supports.click(How.ID, TIKI_BTN_CHECK_OUT);
@@ -86,34 +87,43 @@ public class TIKI_Tests extends TIKI_Page{
 //	}
 	//search and select for product
 	@Test
-	public void searchAndSelectProduct()
+	public void searchAndSelectProduct() throws InterruptedException
 	{
 		supports.click(How.ID, TIKI_SEARCH_HOME_PAGE);
 		supports.fill(How.ID, TIKI_TXT_SEARCH, "Son moi bbia");
 		supports.click(How.ID, TIKI_SELECT_RESULT);
 		supports.click(How.XPATH, TIKI_PRODUCT);
+		Thread.sleep(5000);
+		addProduct();
+//		Thread.sleep(10000);
+//		addAddress();
 	}
 	//add product to card
 	@Test
-	public void addProduct()
+	public void addProduct() throws InterruptedException
 	{
 		supports.click(How.ID, TIKI_BTN_ADD_PRODUCT);
 		supports.click(How.ID, TIKI_BTN_VIEW_CART);
 		supports.click(How.ID, TIKI_BTN_GOT_IT);
 		supports.click(How.ID, TIKI_BTN_CONTINUE_CHECKOUT);
+		Thread.sleep(5000);
+		login();
 	}
 	@Test
 	//login to buy product
-	public void login()
+	public void login() throws InterruptedException
 	{
 		supports.fill(How.ID, TIKI_TXT_EMAIL_LOGIN, "hoakimphanbackup003@gmail.com");
 		supports.fill(How.ID, TIKI_TXT_PASSWORD_LOGIN, "hoacau123");
 		supports.click(How.ID, TIKI_BTN_LOGIN);
+		Thread.sleep(5000);
+		addAddress();
 	}
 	//add address for shipping
 	@Test
-	public void addAddress()
+	public void addAddress() throws InterruptedException
 	{
+		Thread.sleep(10000);
 		supports.click(How.ID, TIKI_BTN_CONTINUE_CHECKOUT);
 		supports.click(How.ID, TIKI_BTN_ADD_MORE_ADDRESS);
 		supports.fill(How.XPATH, TIKI_TXT_FULL_NAME_FOR_ORDER, "Co gang qua do an");

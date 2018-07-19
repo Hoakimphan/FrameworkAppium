@@ -1,10 +1,4 @@
-D:\workspace\FrameworkTest\src\test\java\com\datas\ReadFileExcel.java
-D:\workspace\FrameworkTest\src\test\java\com\tests\test.java
-D:\workspace\FrameworkTest\src\test\java\com\datas\ReadDataUntils.java
-D:\workspace\FrameworkTest\src\test\java\com\tests\TestDemo.java
-D:\workspace\FrameworkTest\src\test\java\com\modules\BMI_Calculate_Functions.java
-D:\workspace\FrameworkTest\src\test\java\com\objects\BMI_Calculate_Page.java
-D:\workspace\FrameworkTest\src\test\java\com\tests\BMI_Calculate_Tests.java
-D:\workspace\FrameworkTest\src\test\java\com\configs\Configs.java
-D:\workspace\FrameworkTest\src\test\java\com\datas\PathProvider.java
-D:\workspace\FrameworkTest\src\test\java\com\untils\Supports.java
+D:\workspace\FrameworkTest\src\test\java\com\untils\AndroidSupports.java
+D:\workspace\FrameworkTest\src\test\java\com\objects\TIKI_Page.java
+D:\workspace\FrameworkTest\src\test\java\com\tests\TIKI_Tests.java
+D:\workspace\FrameworkTest\src\test\java\com\tests\demotesst.java

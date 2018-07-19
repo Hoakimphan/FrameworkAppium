@@ -1,11 +1,5 @@
-com\tests\TestDemo.class
-com\datas\ReadDataUntils.class
-com\modules\BMI_Calculate_Functions.class
-com\datas\PathProvider.class
-com\untils\Supports$1.class
-com\untils\Supports.class
-com\datas\ReadFileExcel.class
-com\configs\Configs.class
-com\objects\BMI_Calculate_Page.class
-com\tests\BMI_Calculate_Tests.class
-com\tests\test.class
+com\untils\AndroidSupports$1.class
+com\tests\TIKI_Tests.class
+com\objects\TIKI_Page.class
+com\tests\demotesst.class
+com\untils\AndroidSupports.class

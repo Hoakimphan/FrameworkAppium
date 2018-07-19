@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Tiki Suite Test">
-	<test thread-count="1" name="BuyAProduct">
+	<test name="Buy product on Tiki">
 		<classes>
 			<class name="com.tests.TIKI_Tests"/>
 		</classes>

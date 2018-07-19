@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="3" ignored="0" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="125164" started-at="2018-07-15T16:46:39Z" finished-at="2018-07-15T16:48:45Z">
+  <suite name="Default suite" duration-ms="240437" started-at="2018-07-19T16:58:50Z" finished-at="2018-07-19T17:02:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="125164" started-at="2018-07-15T16:46:39Z" finished-at="2018-07-15T16:48:45Z">
+    <test name="Default test" duration-ms="240437" started-at="2018-07-19T16:58:50Z" finished-at="2018-07-19T17:02:50Z">
       <class name="com.tests.TIKI_Tests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.TIKI_Tests@4e718207]" name="setUp" is-config="true" duration-ms="10147" started-at="2018-07-15T16:46:39Z" finished-at="2018-07-15T16:46:49Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.TIKI_Tests@4671e53b]" name="setUp" is-config="true" duration-ms="10086" started-at="2018-07-19T16:58:50Z" finished-at="2018-07-19T16:59:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="addAddress()[pri:0, instance:com.tests.TIKI_Tests@4e718207]" name="addAddress" duration-ms="31208" started-at="2018-07-15T16:46:50Z" finished-at="2018-07-15T16:47:21Z">
+        <test-method status="FAIL" signature="addAddress()[pri:0, instance:com.tests.TIKI_Tests@4671e53b]" name="addAddress" duration-ms="41310" started-at="2018-07-19T16:59:00Z" finished-at="2018-07-19T16:59:41Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: vn.tiki.app.tikiandroid:id/btContinueCheckout (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
@@ -22,7 +22,7 @@ at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.j
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 at com.untils.AndroidSupports.waitForElement(AndroidSupports.java:78)
 at com.untils.AndroidSupports.click(AndroidSupports.java:100)
-at com.tests.TIKI_Tests.addAddress(TIKI_Tests.java:117)
+at com.tests.TIKI_Tests.addAddress(TIKI_Tests.java:127)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -67,7 +67,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAddress -->
-        <test-method status="FAIL" signature="addProduct()[pri:0, instance:com.tests.TIKI_Tests@4e718207]" name="addProduct" duration-ms="30778" started-at="2018-07-15T16:47:21Z" finished-at="2018-07-15T16:47:52Z">
+        <test-method status="FAIL" signature="addProduct()[pri:0, instance:com.tests.TIKI_Tests@4671e53b]" name="addProduct" duration-ms="31067" started-at="2018-07-19T16:59:41Z" finished-at="2018-07-19T17:00:12Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: vn.tiki.app.tikiandroid:id/btAddToCart (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
@@ -78,7 +78,7 @@ at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.j
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 at com.untils.AndroidSupports.waitForElement(AndroidSupports.java:78)
 at com.untils.AndroidSupports.click(AndroidSupports.java:100)
-at com.tests.TIKI_Tests.addProduct(TIKI_Tests.java:100)
+at com.tests.TIKI_Tests.addProduct(TIKI_Tests.java:105)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -123,7 +123,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProduct -->
-        <test-method status="FAIL" signature="login()[pri:0, instance:com.tests.TIKI_Tests@4e718207]" name="login" duration-ms="31304" started-at="2018-07-15T16:47:52Z" finished-at="2018-07-15T16:48:23Z">
+        <test-method status="FAIL" signature="login()[pri:0, instance:com.tests.TIKI_Tests@4671e53b]" name="login" duration-ms="31388" started-at="2018-07-19T17:00:12Z" finished-at="2018-07-19T17:00:44Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: vn.tiki.app.tikiandroid:id/etEmail (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
@@ -135,7 +135,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 at com.untils.AndroidSupports.waitForElement(AndroidSupports.java:78)
 at com.untils.AndroidSupports.getElement(AndroidSupports.java:53)
 at com.untils.AndroidSupports.fill(AndroidSupports.java:108)
-at com.tests.TIKI_Tests.login(TIKI_Tests.java:109)
+at com.tests.TIKI_Tests.login(TIKI_Tests.java:116)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -180,11 +180,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="searchAndSelectProduct()[pri:0, instance:com.tests.TIKI_Tests@4e718207]" name="searchAndSelectProduct" duration-ms="18505" started-at="2018-07-15T16:48:23Z" finished-at="2018-07-15T16:48:41Z">
+        <test-method status="PASS" signature="searchAndSelectProduct()[pri:0, instance:com.tests.TIKI_Tests@4671e53b]" name="searchAndSelectProduct" duration-ms="123173" started-at="2018-07-19T17:00:44Z" finished-at="2018-07-19T17:02:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchAndSelectProduct -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.tests.TIKI_Tests@4e718207]" name="TearDown" is-config="true" duration-ms="3171" started-at="2018-07-15T16:48:41Z" finished-at="2018-07-15T16:48:45Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.tests.TIKI_Tests@4671e53b]" name="TearDown" is-config="true" duration-ms="3355" started-at="2018-07-19T17:02:47Z" finished-at="2018-07-19T17:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
